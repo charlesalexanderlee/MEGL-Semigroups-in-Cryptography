@@ -12,11 +12,11 @@ Groups form an integral part of many cryptographic systems; mainly due to the pr
 **Faculty Member**
 * Dr. Scott Carson
 
-**Doctoral Intern**
+**Graduate Students**
 * Allison Kohne
 
-**Undergraduate Interns**
+**Undergraduate Students**
 * Ariel Clemmons
 * Shikha Kinariwala
-* Julia Snyder
 * Charles Alexander Lee
+* Julia Snyder
