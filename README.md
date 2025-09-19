@@ -13,12 +13,10 @@ Groups form an integral part of many cryptographic systems; mainly due to the pr
 * Dr. Scott Carson
 
 **Doctoral Intern**
-* Julia Snyder
+* Allison Kohne
 
 **Undergraduate Interns**
 * Ariel Clemmons
 * Shikha Kinariwala
-* Allison Kohne
+* Julia Snyder
 * Charles Alexander Lee
-
-
