@@ -10,7 +10,7 @@ def boolean_matmul(A, B):
     Perform Boolean matrix multiplication:
     (A ⊙ B)[i,j] = OR_k (A[i,k] AND B[k,j])
     """
-    # Ensure boolean dtype
+    #boolean dtype
     A = np.array(A, dtype=bool)
     B = np.array(B, dtype=bool)
     
@@ -20,14 +20,14 @@ def boolean_matmul(A, B):
 
     return result.astype(int)
     
-# Alice's private key
+#alice private key
 def p_a(t: np.array):
     return np.maximum(np.identity(3, dtype=int), t)
 
 def q_a(t: np.array):
     return np.identity(3, dtype=int)
 
-# Bob's private key
+#bob private key
 def p_b(t: np.array):
     t_squared = boolean_matmul(t, t)
     return np.maximum(t, t_squared)
@@ -36,7 +36,7 @@ def q_b(t: np.array):
     t_squared = boolean_matmul(t, t)  
     return np.maximum(np.identity(3, dtype=int), np.maximum(t, t_squared))
 
-# Public parameters
+#public parameters
 M_1 = np.array([[0, 1, 0],
                [0, 1, 1],
                [1, 0, 0]])
@@ -49,11 +49,11 @@ S = np.array([[1, 0, 0],
              [0, 0, 1],
              [0, 0, 0]])
 
-# Alice and Bob's public key
+#alice bob public key
 a_pub = boolean_matmul(p_a(M_1), boolean_matmul(S, q_a(M_2)))
 b_pub = boolean_matmul(p_b(M_1), boolean_matmul(S, q_b(M_2)))
 
-# Alice and Bob compute the common secret key
+#alice bob compute common secret key
 common_secret_a = boolean_matmul(p_a(M_1), boolean_matmul(b_pub, q_a(M_2)))
 common_secret_b = boolean_matmul(p_b(M_1), boolean_matmul(a_pub, q_b(M_2)))
 
